@@ -6,6 +6,13 @@ This repository trains neural networks to learn a self-financing hedging strateg
 
 ---
 
+## Contents
+
+- `notebooks/deep_hedging_project3.ipynb`: end-to-end workflow (simulation → training → evaluation → comparison with delta hedging)
+- `requirements.txt`: minimal dependencies
+
+---  
+
 ## Model Setup
 
 We consider a risk-neutral Black–Scholes model:
@@ -49,12 +56,9 @@ The learned hedge is evaluated via the out-of-sample P&L distribution.
 
 ---
 
-## Notebook Contents
+## Running
 
-- Exact simulation of Black–Scholes paths
-- Neural network training (multi-network or time-conditioned variant)
-- Hedging P&L distribution analysis (mean, variance, histogram)
-- Comparison with discrete-time Black–Scholes delta hedging
-- Visualization of learned hedge vs analytical delta
+```bash
+pip install -r requirements.txt
 
 
