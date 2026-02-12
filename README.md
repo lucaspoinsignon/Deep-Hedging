@@ -10,21 +10,22 @@ This repository trains neural networks to learn a self-financing hedging strateg
 
 We consider a risk-neutral Black–Scholes model:
 
-- \( S_0 = 1 \)
-- \( \sigma = 0.5 \)
-- \( T = 30/365 \)
-- \( N = 30 \) rebalancing dates
-- \( r = 0 \)
-- Strike \( K = 1 \)
+- $S_0 = 1$
+- $\sigma = 0.5$
+- $T = 30/365$
+- $N = 30$ rebalancing dates
+- $r = 0$
+- Strike $K = 1$
 
 The option payoff is:
 
-\[
+$$
 g(S_T) = (S_T - K)^+
-\]
+$$
 
 Training set: 100,000 simulated paths  
-Test set: 10,000 simulated paths  
+Test set: 10,000 simulated paths
+
 
 ---
 
