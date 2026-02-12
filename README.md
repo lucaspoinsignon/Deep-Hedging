@@ -8,7 +8,7 @@ This repository trains neural networks to learn a self-financing hedging strateg
 
 ## Contents
 
-- `notebooks/deep_hedging_project3.ipynb`: end-to-end workflow (simulation → training → evaluation → comparison with delta hedging)
+- `notebooks/deep_hedging.ipynb`: end-to-end workflow (simulation → training → evaluation → comparison with delta hedging)
 - `requirements.txt`: minimal dependencies
 
 ---  
