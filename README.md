@@ -57,7 +57,4 @@ The learned hedge is evaluated via the out-of-sample P&L distribution.
 - Comparison with discrete-time Black–Scholes delta hedging
 - Visualization of learned hedge vs analytical delta
 
----
-
-## Repository Structure
 
