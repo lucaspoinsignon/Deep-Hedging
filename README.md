@@ -31,23 +31,18 @@ Test set: 10,000 simulated paths
 
 ## Deep Hedging Objective
 
-We minimize the empirical squared hedging error over simulated paths:
+We train neural networks to minimize the empirical squared hedging error over Monte Carlo simulated paths.
 
-$$
-\frac{1}{m}\sum_{i=1}^{m}
-\left(
-g(S_T^{(i)}) - p
-- \sum_{j=0}^{N-1} H_{t_j}(S_{t_j}^{(i)})
-\left(S_{t_{j+1}}^{(i)} - S_{t_j}^{(i)}\right)
-\right)^2
-$$
+The loss corresponds to the mean squared difference between the terminal payoff $g(S_T)$ and the discrete-time self-financing hedging portfolio:
 
+$g(S_T) - p - \sum_{j=0}^{N-1} H_{t_j}(S_{t_j}) (S_{t_{j+1}} - S_{t_j})$
 
 where:
 
-- $p$ is the Black–Scholes call price at $t=0$
+- $p$ is the Black–Scholes price at $t=0$
 - $H_{t_j}$ are neural networks representing hedge ratios
 - Rebalancing occurs at discrete time steps
+
 
 
 The learned hedge is evaluated via the out-of-sample P&L distribution.
